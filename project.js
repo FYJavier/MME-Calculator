@@ -6,14 +6,20 @@ const operator = document.getElementById("operator");
 const operatorValue = operator.value
 
 function calculation() {
-    if (numOne.value === "3") {
-        return console.log(numOne.value);
+    if (operator.value === "+") {
+        const answer = document.createElement('p')
+        const body = document.querySelector('body')
+        body.append(answer);
+        return answer.innerText = "hello";
+
+        // return console.log(numOne.value);
+
     } else {
         return console.log("meh")
     }
 }
 
-numOne.addEventListener("click", e => {
+operator.addEventListener("click", e => {
     calculation();
   });
 
