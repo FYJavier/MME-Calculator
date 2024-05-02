@@ -5,17 +5,32 @@ const numTwoValue = numTwo.value
 const operator = document.getElementById("operator");
 const operatorValue = operator.value
 
+
 function calculation() {
     if (operator.value === "+") {
         const answer = document.createElement('p')
         const body = document.querySelector('body')
         body.append(answer);
-        return answer.innerText = "hello";
-
-        // return console.log(numOne.value);
-
-    } else {
-        return console.log("meh")
+        const sumResponse = parseInt(numOne.value) + parseInt(numTwo.value)
+        return answer.innerText = numOne.value + "+" + numTwo.value + "=" + sumResponse;
+    } else if (operator.value === "-"){
+        const answer = document.createElement('p')
+        const body = document.querySelector('body')
+        body.append(answer);
+        const sumResponse = parseInt(numOne.value) - parseInt(numTwo.value)
+        return answer.innerText = numOne.value + "-" + numTwo.value + "=" + sumResponse;
+    } else if (operator.value === "*") {
+        const answer = document.createElement('p')
+        const body = document.querySelector('body')
+        body.append(answer);
+        const sumResponse = parseInt(numOne.value) * parseInt(numTwo.value)
+        return answer.innerText = numOne.value + "*" + numTwo.value + "=" + sumResponse;
+    } else if (operator.value === "/") {
+        const answer = document.createElement('p')
+        const body = document.querySelector('body')
+        body.append(answer);
+        const sumResponse = parseInt(numOne.value) / parseInt(numTwo.value)
+        return answer.innerText = numOne.value + "/" + numTwo.value + "=" + sumResponse;
     }
 }
 
